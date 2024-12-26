@@ -38,7 +38,8 @@ function fetchNews() {
             if (data.articles) {
                 renderNews(data.articles)
                 updatePagination(data.totalResults)
-            } else {
+            } 
+            else {
                 boxNews.innerHTML = `<li class='txt-error'>Error with API</li>`
             }
         })
