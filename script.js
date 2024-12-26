@@ -26,7 +26,7 @@ function fetchNews() {
     let url = `${APIURL}?q=${currentInput}&page=${currentPage}&pageSize=${newsPerPage}&apiKey=${APIKEY}`
     console.log("Fetching news from URL:", url)
 
-    fetch(url)
+    fetch(url, { method: 'GET' })
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`)
